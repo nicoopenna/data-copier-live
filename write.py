@@ -42,6 +42,7 @@ def write_table(db_details, table_name, data, column_names, batch_size=10000):
                 db_pass=target_db['DB_PASS']
         ) as conn:
             with conn.cursor() as cur:
+                logger.debug(f"Starting write to {table_name} (columns: {column_names})")
                 # Injection-safe query construction
                 query = sql.SQL("INSERT INTO {} ({}) VALUES %s").format(
                     sql.Identifier(table_name),

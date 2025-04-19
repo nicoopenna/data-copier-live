@@ -1,25 +1,19 @@
-2025-04-19 00:13:29,417 - INFO - Starting pipeline execution for dev environment
-2025-04-19 00:13:29,420 - INFO - Tables to process: products
-2025-04-19 00:13:29,420 - INFO - Processing table: products
-2025-04-19 00:13:29,522 - INFO - Completed products in 0:00:00.102042 (1345 rows)
-2025-04-19 00:13:29,522 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.104508
-2025-04-19 00:15:58,510 - INFO - Starting pipeline execution for dev environment
-2025-04-19 00:15:58,512 - INFO - Tables to process: orders
-2025-04-19 00:15:58,513 - INFO - Processing table: orders
-2025-04-19 00:15:59,201 - INFO - Completed orders in 0:00:00.688442 (68883 rows)
-2025-04-19 00:15:59,201 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.691450
-2025-04-19 00:17:00,046 - INFO - Starting pipeline execution for dev environment
-2025-04-19 00:17:00,057 - INFO - Tables to process: customers, departments, categories, products, orders, order_items
-2025-04-19 00:17:00,058 - INFO - Processing table: customers
-2025-04-19 00:17:00,408 - INFO - Completed customers in 0:00:00.349919 (12435 rows)
-2025-04-19 00:17:00,408 - INFO - Processing table: departments
-2025-04-19 00:17:00,427 - INFO - Completed departments in 0:00:00.018913 (6 rows)
-2025-04-19 00:17:00,427 - INFO - Processing table: categories
-2025-04-19 00:17:00,471 - INFO - Completed categories in 0:00:00.043690 (58 rows)
-2025-04-19 00:17:00,471 - INFO - Processing table: products
-2025-04-19 00:17:00,530 - INFO - Completed products in 0:00:00.058178 (1345 rows)
-2025-04-19 00:17:00,530 - INFO - Processing table: orders
-2025-04-19 00:17:01,079 - INFO - Completed orders in 0:00:00.549199 (68883 rows)
-2025-04-19 00:17:01,079 - INFO - Processing table: order_items
-2025-04-19 00:17:02,599 - INFO - Completed order_items in 0:00:01.519135 (172198 rows)
-2025-04-19 00:17:02,599 - INFO - Pipeline completed. 6/6 tables processed in 0:00:02.553391
+2025-04-19 00:37:11,118 - INFO - Starting pipeline execution for dev environment
+2025-04-19 00:37:11,121 - INFO - Tables to process: orders
+2025-04-19 00:37:11,121 - INFO - Processing table: orders
+2025-04-19 00:37:11,121 - DEBUG - Starting read from orders (limit: 0)
+2025-04-19 00:37:11,282 - DEBUG - Retrieved 68883 rows from orders
+2025-04-19 00:37:11,282 - DEBUG - Connection closed
+2025-04-19 00:37:11,753 - DEBUG - Inserted 68883 rows into orders
+2025-04-19 00:37:11,753 - INFO - Completed orders in 0:00:00.632573 (68883 rows)
+2025-04-19 00:37:11,753 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.635568
+2025-04-19 00:38:54,392 - INFO - Starting pipeline execution for dev environment
+2025-04-19 00:38:54,395 - INFO - Tables to process: orders
+2025-04-19 00:38:54,395 - INFO - Processing table: orders
+2025-04-19 00:38:54,395 - DEBUG - Starting read from orders (limit: 0)
+2025-04-19 00:38:54,644 - DEBUG - Retrieved 68883 rows from orders
+2025-04-19 00:38:54,644 - DEBUG - Connection closed
+2025-04-19 00:38:54,651 - DEBUG - Starting write to orders (columns: ('order_id', 'order_date', 'order_customer_id', 'order_status'))
+2025-04-19 00:38:55,086 - DEBUG - Inserted 68883 rows into orders
+2025-04-19 00:38:55,086 - INFO - Completed orders in 0:00:00.691240 (68883 rows)
+2025-04-19 00:38:55,086 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.694241
