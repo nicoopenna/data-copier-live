@@ -22,7 +22,7 @@ services:
       - "postgres-data:/var/lib/postgresql/data"
       - "./postgres-init:/docker-entrypoint-initdb.d"
     environment:
-      POSTGRES_DB: ${TARGET_DB_NAME}
+      POSTGRES_DB: retail_db
       POSTGRES_USER: ${TARGET_DB_USER}
       POSTGRES_PASSWORD: ${TARGET_DB_PASS}
     ports:
