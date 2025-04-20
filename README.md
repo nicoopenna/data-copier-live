@@ -18,8 +18,4 @@ A high-performance data pipeline that extracts data from MySQL, transforms it in
 ## 📦 Pipeline Architecture
 
 ## 📊 Pipeline Architecture
-<details>
-<summary>Click to view diagram</summary>
-
-![Data Flow](https://www.mermaidchart.com/raw/e0f73889-bafc-4e4e-828f-725afcd75634?theme=light&version=v0.1&format=svg)
-</details>
+![Data Flow Diagram](./assets/diagram.svg)
