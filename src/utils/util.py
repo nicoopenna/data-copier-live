@@ -1,7 +1,7 @@
 import pandas as pd
 from mysql import connector as mc
 from mysql.connector import errorcode as ec
-from config import DB_DETAILS
+from src.config.config import DB_DETAILS
 from psycopg2 import connect
 
 

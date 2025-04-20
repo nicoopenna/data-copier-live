@@ -1,6 +1,6 @@
 from psycopg2.extras import execute_values
 from psycopg2 import sql
-from util import get_connection
+from src.utils.util import get_connection
 import logging
 
 logger = logging.getLogger(__name__)

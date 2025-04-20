@@ -1,0 +1,82 @@
+2025-04-19 00:37:11,118 - INFO - Starting pipeline execution for dev environment
+2025-04-19 00:37:11,121 - INFO - Tables to process: orders
+2025-04-19 00:37:11,121 - INFO - Processing table: orders
+2025-04-19 00:37:11,121 - DEBUG - Starting read from orders (limit: 0)
+2025-04-19 00:37:11,282 - DEBUG - Retrieved 68883 rows from orders
+2025-04-19 00:37:11,282 - DEBUG - Connection closed
+2025-04-19 00:37:11,753 - DEBUG - Inserted 68883 rows into orders
+2025-04-19 00:37:11,753 - INFO - Completed orders in 0:00:00.632573 (68883 rows)
+2025-04-19 00:37:11,753 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.635568
+2025-04-19 00:38:54,392 - INFO - Starting pipeline execution for dev environment
+2025-04-19 00:38:54,395 - INFO - Tables to process: orders
+2025-04-19 00:38:54,395 - INFO - Processing table: orders
+2025-04-19 00:38:54,395 - DEBUG - Starting read from orders (limit: 0)
+2025-04-19 00:38:54,644 - DEBUG - Retrieved 68883 rows from orders
+2025-04-19 00:38:54,644 - DEBUG - Connection closed
+2025-04-19 00:38:54,651 - DEBUG - Starting write to orders (columns: ('order_id', 'order_date', 'order_customer_id', 'order_status'))
+2025-04-19 00:38:55,086 - DEBUG - Inserted 68883 rows into orders
+2025-04-19 00:38:55,086 - INFO - Completed orders in 0:00:00.691240 (68883 rows)
+2025-04-19 00:38:55,086 - INFO - Pipeline completed. 1/1 tables processed in 0:00:00.694241
+2025-04-20 18:47:06,888 - __main__ - INFO - Starting data pipeline execution for dev environment
+2025-04-20 18:47:06,910 - __main__ - INFO - Tables to migrate: orders
+2025-04-20 18:47:06,910 - __main__ - INFO - Starting migration for table: orders
+2025-04-20 18:47:09,035 - src.db.read - ERROR - Failed reading orders: cannot access local variable 'connection' where it is not associated with a value
+2025-04-20 18:47:09,035 - __main__ - ERROR - Failed to migrate table orders: cannot access local variable 'connection' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\Projects\data-copier-live\src\app.py", line 50, in process_table
+    data, column_names = read_table(db_details, table_name)
+                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\data-copier-live\src\db\read.py", line 23, in read_table
+    conn = get_connection(
+        db_type=source_db['DB_TYPE'],
+    ...<4 lines>...
+        db_pass=source_db['DB_PASS']
+    )
+  File "E:\Projects\data-copier-live\src\utils\util.py", line 49, in get_connection
+    connection = get_mysql_conn(db_host = db_host,
+                                db_port = db_port,
+                                db_name = db_name,
+                                db_user = db_user,
+                                db_pass = db_pass)
+  File "E:\Projects\data-copier-live\src\utils\util.py", line 28, in get_mysql_conn
+    return connection
+           ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'connection' where it is not associated with a value
+2025-04-20 18:47:09,036 - __main__ - INFO - Pipeline completed. Success: 0/1 tables in 2.15 seconds
+2025-04-20 18:57:35,196 - __main__ - INFO - Starting data pipeline execution for dev environment
+2025-04-20 18:57:35,200 - __main__ - INFO - Tables to migrate: orders
+2025-04-20 18:57:35,200 - __main__ - INFO - Starting migration for table: orders
+2025-04-20 18:57:35,495 - src.db.write - ERROR - Failed on orders: relation "orders" does not exist
+LINE 1: INSERT INTO "orders" ("order_id","order_date","order_custome...
+                    ^
+
+2025-04-20 18:57:35,496 - __main__ - ERROR - Failed to migrate table orders: relation "orders" does not exist
+LINE 1: INSERT INTO "orders" ("order_id","order_date","order_custome...
+                    ^
+Traceback (most recent call last):
+  File "E:\Projects\data-copier-live\src\app.py", line 57, in process_table
+    write_table(db_details, table_name, data, column_names)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\data-copier-live\src\db\write.py", line 52, in write_table
+    execute_values(
+    ~~~~~~~~~~~~~~^
+        cur,
+        ^^^^
+    ...<2 lines>...
+        page_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Projects\data-copier-live\.venv\Lib\site-packages\psycopg2\extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "orders" does not exist
+LINE 1: INSERT INTO "orders" ("order_id","order_date","order_custome...
+                    ^
+
+2025-04-20 18:57:35,502 - __main__ - INFO - Pipeline completed. Success: 0/1 tables in 0.31 seconds
+2025-04-20 19:18:40,697 - __main__ - INFO - Starting data pipeline execution for dev environment
+2025-04-20 19:18:40,701 - __main__ - INFO - Tables to migrate: orders
+2025-04-20 19:18:40,701 - __main__ - INFO - Starting migration for table: orders
+2025-04-20 19:18:41,413 - __main__ - INFO - Successfully migrated orders (68883 rows in 0.71s)
+2025-04-20 19:18:41,417 - __main__ - INFO - Pipeline completed. Success: 1/1 tables in 0.72 seconds

@@ -1,4 +1,4 @@
-from util import get_connection
+from src.utils.util import get_connection
 import logging
 
 
