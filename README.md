@@ -15,7 +15,6 @@ A high-performance data pipeline that extracts data from MySQL, transforms it in
 - **Production-Grade Logging**: Detailed execution tracking at DEBUG level
 - **Container-Ready**: Dockerized services with health checks
 
-## 📦 Pipeline Architecture
 
 ## 📊 Pipeline Architecture
 ![Data Flow Diagram](./assets/diagram.svg)
