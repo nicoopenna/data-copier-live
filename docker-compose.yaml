@@ -24,6 +24,8 @@ services:
   mysql-db:
     image: mysql:5.6
     container_name: retail-mysql
+    env_file:
+      - src/.env
     volumes:
       - mysql-data:/var/lib/mysql
       - ./src/db/init/mysql-init:/docker-entrypoint-initdb.d
@@ -46,6 +48,8 @@ services:
   postgres-db:
     image: postgres:13
     container_name: retail-postgres
+    env_file:
+      - src/.env
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./src/db/init/postgres-init:/docker-entrypoint-initdb.d

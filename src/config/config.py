@@ -3,7 +3,7 @@ DB_DETAILS = {
     'dev': {
         'SOURCE_DB': {
             'DB_TYPE': 'mysql',
-            'DB_HOST': '127.0.0.1',
+            'DB_HOST': '0.0.0.0',
             "DB_PORT": "3307",
             'DB_NAME': 'retail_db',
             'DB_USER': os.environ.get('SOURCE_DB_USER'),
@@ -11,7 +11,7 @@ DB_DETAILS = {
         },
         'TARGET_DB': {
             'DB_TYPE': 'postgres',
-            'DB_HOST': '127.0.0.1',
+            'DB_HOST': '0.0.0.0',
             "DB_PORT": "5433",
             'DB_NAME': 'retail_db',
             'DB_USER': os.environ.get('TARGET_DB_USER'),
